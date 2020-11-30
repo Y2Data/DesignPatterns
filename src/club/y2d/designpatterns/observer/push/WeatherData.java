@@ -1,4 +1,4 @@
-package club.y2d.designpatterns.observer;
+package club.y2d.designpatterns.observer.push;
 
 import java.util.ArrayList;
 import java.util.List;

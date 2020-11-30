@@ -1,10 +1,11 @@
-package club.y2d.designpatterns.observer;
+package club.y2d.designpatterns.observer.push;
 
-public class WeatherStation {
+public class WeatherStationHeatIndex {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
+        CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
+        HeathIndexDisplay heathIndexDisplay = new HeathIndexDisplay(weatherData);
 
-        CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
         weatherData.setMeasurements(80, 65, 30.4f);
         weatherData.setMeasurements(82, 70, 29.2f);
         weatherData.setMeasurements(78, 90, 29.2f);

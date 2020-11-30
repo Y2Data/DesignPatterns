@@ -1,4 +1,4 @@
-package club.y2d.designpatterns.observer;
+package club.y2d.designpatterns.observer.pull;
 
 public class HeathIndexDisplay implements Observer, DisplayElement {
     float heatIndex;
@@ -24,8 +24,8 @@ public class HeathIndexDisplay implements Observer, DisplayElement {
         return index;
     }
 
-    public void update(float temp, float humidity, float pressure) {
-        heatIndex = computeIndex(temp, humidity);
+    public void update() {
+        heatIndex = computeIndex(weatherData.getTemperature(), weatherData.getHumidity());
         display();
     }
 }
